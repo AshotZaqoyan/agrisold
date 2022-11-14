@@ -1,0 +1,40 @@
+.b2{
+    position: absolute;
+    height:auto;
+    background: #F7C35F;
+    border-width: 12px 0px;
+    border-style: dashed;
+    border-color: white;
+} 
+ 
+.Row {
+    display: table;
+    width: 100%; 
+    table-layout: fixed; 
+    border-spacing: 10px; 
+}
+.Column {
+    display: table-cell;
+    
+    
+}
+
+.Column img{
+    border-radius:8%;
+}
+.Row1 {
+    display: table;
+    width:100%;
+    table-layout: fixed; 
+    border-spacing: 10px; 
+    padding-left:0px;
+    
+}
+
+.Column1 {
+    
+    display: table-cell;
+    background-color: #FFFFFF;
+    border-radius:18px;
+    
+}
