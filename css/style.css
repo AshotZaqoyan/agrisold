@@ -26,14 +26,3 @@
     
    
 }
-.product{
-    display:flex;
-}
-
-.productbox{
-    border: 5px solid #60941A;
-    width: 350px;
-    border-radius: 55px;
-    display: none;
-}
-
