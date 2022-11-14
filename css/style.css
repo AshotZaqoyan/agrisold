@@ -7,7 +7,7 @@
     border-color: white;
 } 
  
-.Row {
+/* .Row {
     display: table;
     width: 100%; 
     table-layout: fixed; 
@@ -19,10 +19,10 @@
     
 }
 
-.Column img{
+/* .Column img{
     border-radius:8%;
-}
-.Row1 {
+} */
+/* .Row1 {
     display: table;
     width:100%;
     table-layout: fixed; 
@@ -37,4 +37,42 @@
     background-color: #FFFFFF;
     border-radius:18px;
     
+} */
+
+
+.RowTr{
+    display: table;
+    width:100%;
+    table-layout: fixed;
+    
+}
+.RowTr2{
+    display: table;
+    width:100%;
+    table-layout: fixed;
+    
+}
+ .RowTr img{
+    border-radius:20px;
+    margin-top:5%;
+    
+}
+
+/* .RowText{
+    width:50px;
+    background-color: #FFFFFF;
+} */
+.H2Table{
+    position:relative;
+    
+    padding-top:2%;
+    padding-bottom:2%;
+    margin-top: -8%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    border-radius:18px;
+    width:auto;
+    background-color: #FFFFFF;
+    color:#60941A;
 }
