@@ -6,7 +6,7 @@
     height:auto;
     background: #F7C35F;
     border-width: 12px 0px;
-    border-style: dashed;
+    outline-style: dotted;
     padding: 25px;
     border-color:white ;
 } 
