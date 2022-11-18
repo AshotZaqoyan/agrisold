@@ -1,5 +1,32 @@
+.banner {
+    z-index:-1;
+    
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+.banner > .text {
+    position: absolute;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 60px;
+    right: 100px;
+    top: 125px;
+    transform: translate(-15%, 25%);
+    color: white;
+    border-radius: 80px;
+    max-width: 450px;
+    text-align: center;
+    font-family: BERD;
+}
 .b2{
     /* position: absolute; */
+    margin-top:-5px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

@@ -45,6 +45,7 @@ nav {
 	padding: 0 5%;
 	height: 70px;
 	background-color: rgb(255, 250, 250);
+	position: sticky;
 }
 
 .acc {
