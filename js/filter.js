@@ -122,7 +122,7 @@ const setCategories = () => {
 function checkfilter() {
 	choices[0] === undefined || choices.some(Set.prototype.has, new Set(["Ամբողջը"])) ?
 		displayProducts((data.filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu)) :
-		displayProducts(((data.filter(item => item.cat.split(' ').some(Set.prototype.has, new Set(choices)))).filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu));
+		displayProducts(((data.filter(item => choices.includes(item.cat))).filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu));
 }
 
 const setPrices = () => {
