@@ -22,7 +22,11 @@
     border-radius: 80px;
     max-width: 450px;
     text-align: center;
-    font-family: BERD;
+    
+}
+@font-face {
+    font-family: BerdFont;
+    src: url(../font/BERD.otf)
 }
 .b2{
     /* position: absolute; */
