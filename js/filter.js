@@ -64,11 +64,14 @@ const data = [
 	}
 ];
 
+
 const productsContainer = document.querySelector(".products");
 const searchInput = document.querySelector(".search");
 const categoriesContainer = document.querySelector(".cats");
 const priceRange = document.querySelector(".priceRange");
 const priceValue = document.querySelector(".priceValue");
+let searchvalue = "";
+let rangevalu;
 
 const displayProducts = filteredProducts => {
 	productsContainer.innerHTML = filteredProducts
@@ -91,15 +94,8 @@ const displayProducts = filteredProducts => {
 displayProducts(data);
 
 searchInput.addEventListener("keyup", e => {
-	const value = e.target.value.toLowerCase();
-
-	if (value) {
-		displayProducts(
-			data.filter(item => item.name.toLowerCase().indexOf(value) !== -1)
-		);
-	} else {
-		displayProducts(data);
-	}
+	searchvalue = e.target.value.toLowerCase();
+	checkfilter();
 });
 
 const setCategories = () => {
@@ -115,19 +111,19 @@ const setCategories = () => {
 		.map(
 			cat =>
 				`
-				  <span class="cat"><div class="o"></div>${cat}</span>
+				<br>
+				<input type="checkbox" id="${cat}" value="${cat}" class="cat">
+				<label for="${cat}" class="cat">${cat}</label><br>
 			 `
 		)
-		.join("");
-
-	categoriesContainer.addEventListener("click", e => {
-		const selectedCat = e.target.textContent;
-
-		selectedCat === "Ամբողջը" ?
-			displayProducts(data) :
-			displayProducts(data.filter(item => item.cat === selectedCat));
-	});
+		.join(""); 
 };
+
+function checkfilter() {
+	choices[0] === undefined || choices.some(Set.prototype.has, new Set(["Ամբողջը"])) ?
+		displayProducts((data.filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu)) :
+		displayProducts(((data.filter(item => choices.includes(item.cat))).filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu));
+}
 
 const setPrices = () => {
 	const priceList = data.map(item => item.price);
@@ -138,12 +134,28 @@ const setPrices = () => {
 	priceRange.max = maxPrice;
 	priceRange.value = maxPrice;
 	priceValue.textContent = "֏" + maxPrice;
-
+	rangevalu = maxPrice;
 	priceRange.addEventListener("input", e => {
+		rangevalu = e.target.value;
 		priceValue.textContent = "֏" + e.target.value;
-		displayProducts(data.filter(item => item.price <= e.target.value));
+		checkfilter();
 	});
+
 };
 
 setCategories();
 setPrices();
+
+let choices = [];
+const cat = document.querySelectorAll('.cat');
+
+cat.forEach(category => {
+	category.addEventListener('change', () => {
+		console.log(rangevalu);
+		category.checked ?
+			choices.push(category.value)
+			: choices.splice(choices.indexOf(category.value), 1);
+		//console.log(choices)
+		checkfilter();
+	})
+})
