@@ -1,11 +1,26 @@
-.footer{background-image: url('cta-1-bg-1.jpg')}
-	p{color: white;}
+.footer
+{
+	background:
+	 linear-gradient(rgba(108,163,34,0.7), rgba(108,163,34,0.7) ),
+      url(cta-1-bg-1.jpg);
+	  background-position: center;
+	  background-size: cover;
+	  
+	  
+}
+
+
+	p{ color: white;}
 	h1{color: white;}
 	.dz{margin-left: 50px;
 	margin-top:50px;
 	border-radius: 12px;}
+	.a{color: white;}
 	.p{margin-left: 200px;
 	margin-top: 50px;}
 	.e{margin-left: 200px;}
 	.f{margin-left: 200px;
 	margin-top: 400px;}
+.f,.i,.t{background-color: #f7c35f;
+ border-radius: 12px ;}
+	
