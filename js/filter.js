@@ -4,66 +4,71 @@ const data = [
 		name: "Վարունգ",
 		img: "img/var.png",
 		price: 74,
-		cat: "Բանջարեղեն"
+		cat: "2"
 	},
 	{
 		id: 2,
 		name: "Սունկ",
 		img: "img/sun.jpg",
 		price: 74,
-		cat: "Բանջարեղեն"
+		cat: "2"
 	},
 	{
 		id: 3,
 		name: "Ցորեն",
 		img: "img/cor.png",
 		price: 40,
-		cat: "Հացահատիկ"
+		cat: "3"
 	},
 	{
 		id: 4,
 		name: "Լոլիկ",
 		img: "img/lol.png",
 		price: 200,
-		cat: "Բանջարեղեն"
+		cat: "2"
 	},
 	{
 		id: 5,
 		name: "Բազուկ",
 		img: "img/baz.png",
 		price: 16,
-		cat: "Բանջարեղեն"
+		cat: "2"
 	},
 	{
 		id: 6,
 		name: "Լոբի",
 		img: "img/lob.png",
 		price: 74,
-		cat: "Բանջարեղեն"
+		cat: "2"
 	},
 	{
 		id: 7,
 		name: "Կաղամբ",
 		img: "img/kax.png",
 		price: 200,
-		cat: "Բանջարեղեն"
+		cat: "2"
 	},
 	{
 		id: 8,
 		name: "Գազար",
 		img: "img/gaz.png",
 		price: 16,
-		cat: "Բանջարեղեն"
+		cat: "2"
 	},
 	{
 		id: 9,
 		name: "Եգիպտացորեն",
 		img: "img/eg.png",
 		price: 74,
-		cat: "Բանջարեղեն"
+		cat: "2"
 	}
 ];
 
+const categories = {
+	'1': 'Ամբողջը',
+	'2': 'Բանջարեղեն',
+	'3': 'Հացահատիկ'
+};
 
 const productsContainer = document.querySelector(".products");
 const searchInput = document.querySelector(".search");
@@ -99,30 +104,22 @@ searchInput.addEventListener("keyup", e => {
 });
 
 const setCategories = () => {
-	const allCats = data.map(item => item.cat);
-	const categories = [
-		"Ամբողջը",
-		...allCats.filter((item, i) => {
-			return allCats.indexOf(item) === i;
-		})
-	];
-
-	categoriesContainer.innerHTML = categories
+	categoriesContainer.innerHTML = Object.keys(categories)
 		.map(
 			cat =>
 				`
 				<br>
-				<input type="checkbox" id="${cat}" value="${cat}" class="cat">
-				<label for="${cat}" class="cat">${cat}</label><br>
+				<input type="checkbox" id="${categories[cat]}" value="${cat}" class="cat">
+				<label for="${categories[cat]}" class="cat">${categories[cat]}</label><br>
 			 `
 		)
-		.join(""); 
+		.join("");
 };
 
 function checkfilter() {
-	choices[0] === undefined || choices.some(Set.prototype.has, new Set(["Ամբողջը"])) ?
+	choices[0] === undefined || choices.some(Set.prototype.has, new Set(["1"])) ?
 		displayProducts((data.filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu)) :
-		displayProducts(((data.filter(item => choices.includes(item.cat))).filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu));
+		displayProducts(((data.filter(item => choices.includes(item.cat))).filter(item => item.name.toLowerCase().includes(searchvalue))).filter(item => item.price <= rangevalu));
 }
 
 const setPrices = () => {
@@ -151,11 +148,10 @@ const cat = document.querySelectorAll('.cat');
 
 cat.forEach(category => {
 	category.addEventListener('change', () => {
-		console.log(rangevalu);
 		category.checked ?
 			choices.push(category.value)
 			: choices.splice(choices.indexOf(category.value), 1);
 		//console.log(choices)
 		checkfilter();
-	})
-})
+	});
+});
