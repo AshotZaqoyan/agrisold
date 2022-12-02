@@ -58,7 +58,7 @@
 }
 
 .Column img{
-    border-radius:8%;
+    border-radius:25px;
 } 
 .Row1 {
     display: table;
@@ -78,28 +78,7 @@
 }
 
 
-/* .RowTr{
-    display: table;
-    width:100%;
-    table-layout: fixed;
-    
-}
-.RowTr2{
-    display: table;
-    width:100%;
-    table-layout: fixed;
-    
-}
- .RowTr img{
-    border-radius:20px;
-    margin-top:5%;
-    
-}
 
-/* .RowText{
-    width:50px;
-    background-color: #FFFFFF;
-} */
 .H2Table{
     position:relative;
     padding: 1% 5%;
@@ -112,4 +91,10 @@
     background-color: #FFFFFF;
     color:#60941A;
     word-wrap:break-word;
+}
+
+
+.Column img:hover{
+	margin-bottom:15px;
+	transition: all 500ms ease;
 }
