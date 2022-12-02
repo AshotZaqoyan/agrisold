@@ -85,3 +85,118 @@
 	color: #f7c35f;
 	transition: all 600ms ease;
 }
+.banner {
+    z-index:-1;
+    
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+.banner > .text {
+    position: absolute;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 60px;
+    right: 100px;
+    top: 125px;
+    transform: translate(-15%, 25%);
+    color: white;
+    border-radius: 80px;
+    max-width: 450px;
+    text-align: center;
+    
+}
+@font-face {
+    font-family: BerdFont;
+    src: url(../font/BERD.otf)
+}
+.b2{
+    /* position: absolute; */
+    margin-top:-5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:auto;
+    background: #F7C35F;
+    outline-width: 12px;
+    outline-style: dashed;
+    padding: 25px;
+    outline-color:#F7C35F ;
+} 
+ 
+.Row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%; 
+    
+    border-spacing: 10px; 
+}
+.Column {
+    display: table-cell;
+    
+    
+}
+
+.Column img{
+    border-radius:8%;
+} 
+.Row1 {
+    display: table;
+    width:100%;
+    table-layout: fixed; 
+    border-spacing: 10px; 
+    padding-left:0px;
+    
+}
+
+.Column1 {
+    
+    display: table-cell;
+    background-color: #FFFFFF;
+    border-radius:18px;
+    
+}
+
+
+/* .RowTr{
+    display: table;
+    width:100%;
+    table-layout: fixed;
+    
+}
+.RowTr2{
+    display: table;
+    width:100%;
+    table-layout: fixed;
+    
+}
+ .RowTr img{
+    border-radius:20px;
+    margin-top:5%;
+    
+}
+
+/* .RowText{
+    width:50px;
+    background-color: #FFFFFF;
+} */
+.H2Table{
+    position:relative;
+    padding: 1% 5%;
+    margin-top: -8%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 5%;
+    border-radius:18px;
+    width:auto;
+    background-color: #FFFFFF;
+    color:#60941A;
+    word-wrap:break-word;
+}

@@ -1,7 +1,11 @@
+*:before,
+*:after {
+	box-sizing: inherit;
+}
 
 .container {
 	display: flex;
-	padding: 50px;
+	padding: 50px 50px 50px 50px;
 }
 
 .leftMenu {
@@ -10,9 +14,14 @@
 
 .search {
 	padding: 10px;
-	width: 200px;
+	width: 180px;
 	border: 1px solid #60941A;
 	border-radius: 5px;
+	background: url("..//img/search.svg") no-repeat 195px;
+	background-size: 22px;
+	padding-right: 35px;
+	
+	
 }
 
 .search:focus {
@@ -26,11 +35,7 @@
 }
 
 
-.cats {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
+.cats {}
 
 .cat {
 	cursor: pointer;
@@ -61,7 +66,7 @@
 	align-items: center;
 	border: 5px solid #60941A;
 	border-radius: 55px;
-	margin: 43.5px 43.5px 43.5px 43.5px;
+	margin: 43.5px auto 43.5px auto;
 }
 
 img {
@@ -114,4 +119,94 @@ img {
 	background-color: none;
 	display: inline-block;
 	margin-right: 5px;
+}
+
+input[type='checkbox'] {
+	--active: #60941A;
+	--active-inner: #fff;
+	--focus: 2px #81af4593;
+	--border: #BBC1E1;
+	--border-hover: #60941A;
+	--background: #fff;
+	--disabled: #F6F8FF;
+	--disabled-inner: #E1E6F9;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	height: 21px;
+	outline: none;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+	border: 1px solid var(--bc, var(--border));
+	background: var(--b, var(--background));
+	transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+}
+
+.cat:after {
+	content: '';
+	display: block;
+	left: 0;
+	top: 0;
+	position: absolute;
+	transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+}
+
+.cat:checked {
+	--b: var(--active);
+	--bc: var(--active);
+	--d-o: 0.3s;
+	--d-t: 0.6s;
+	--d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+
+.cat:disabled {
+	--b: var(--disabled);
+	cursor: not-allowed;
+	opacity: 0.9;
+}
+
+.cat:disabled:checked {
+	--b: var(--disabled-inner);
+	--bc: var(--border);
+}
+
+.cat:hover:not(:checked):not(:disabled) {
+	--bc: var(--border-hover);
+}
+
+.cat:focus {
+	box-shadow: 0 0 0 var(--focus);
+}
+
+.cat:not(.switch) {
+	width: 21px;
+}
+
+.cat:not(.switch):after {
+	opacity: var(--o, 0);
+}
+
+.cat:not(.switch):checked {
+	--o: 1;
+}
+
+.cat:not(.switch) {
+	border-radius: 7px;
+}
+
+.cat:not(.switch):after {
+	width: 5px;
+	height: 9px;
+	border: 2px solid var(--active-inner);
+	border-top: 0;
+	border-left: 0;
+	left: 7px;
+	top: 4px;
+	transform: rotate(var(--r, 20deg));
+}
+
+.cat:not(.switch):checked {
+	--r: 43deg;
 }
