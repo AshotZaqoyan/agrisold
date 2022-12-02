@@ -77,6 +77,8 @@ const priceRange = document.querySelector(".priceRange");
 const priceValue = document.querySelector(".priceValue");
 let searchvalue = "";
 let rangevalu;
+let choices = [];
+let filteredData;
 
 const displayProducts = filteredProducts => {
 	productsContainer.innerHTML = filteredProducts
@@ -96,13 +98,6 @@ const displayProducts = filteredProducts => {
 		.join("");
 };
 
-displayProducts(data);
-
-searchInput.addEventListener("keyup", e => {
-	searchvalue = e.target.value.toLowerCase();
-	checkfilter();
-});
-
 const setCategories = () => {
 	categoriesContainer.innerHTML = Object.keys(categories)
 		.map(
@@ -116,11 +111,10 @@ const setCategories = () => {
 		.join("");
 };
 
-function checkfilter() {
-	choices[0] === undefined || choices.some(Set.prototype.has, new Set(["1"])) ?
-		displayProducts((data.filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu)) :
-		displayProducts(((data.filter(item => choices.includes(item.cat))).filter(item => item.name.toLowerCase().includes(searchvalue))).filter(item => item.price <= rangevalu));
-}
+searchInput.addEventListener("keyup", e => {
+	searchvalue = e.target.value.toLowerCase();
+	checkfilter();
+});
 
 const setPrices = () => {
 	const priceList = data.map(item => item.price);
@@ -140,18 +134,26 @@ const setPrices = () => {
 
 };
 
+function checkfilter() {
+	filteredData = (data.filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu);
+	if (choices[0] !== undefined && !(choices.includes("1"))) {
+		filteredData = filteredData.filter(item => choices.includes(item.cat));
+	}
+	displayProducts(filteredData);
+}
+
+displayProducts(data);
 setCategories();
 setPrices();
 
-let choices = [];
 const cat = document.querySelectorAll('.cat');
 
 cat.forEach(category => {
 	category.addEventListener('change', () => {
 		category.checked ?
-			choices.push(category.value)
-			: choices.splice(choices.indexOf(category.value), 1);
-		//console.log(choices)
+			choices.push(category.value) :
+			choices.splice(choices.indexOf(category.value), 1);
+		console.log(choices);
 		checkfilter();
 	});
 });
