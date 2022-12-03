@@ -212,3 +212,66 @@
 	transition: all 500ms ease;
 }
 
+.b3{
+    position: absolute;
+    border-radius: 5%;
+    margin-top: 2%;
+    margin-left: 4%;
+    width: 38%;
+    height: 95%;
+
+}
+.tapancik{
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 15%;
+    width: 84%;
+    height: 35%;
+
+}
+.kd{
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    left: 30%;
+    top: 20%;
+    background: linear-gradient(to right,#60941A 0 35%, #F7C35F 0 65%);
+    border-radius: 5%;
+    outline-width: 5px;
+    outline-style: dashed;
+    outline-color:  #60941A ;
+}
+.bari{
+    position: absolute;
+    font-family: Arial;
+    color: #ffffff;
+    margin-left: 45%;
+    margin-top: 13%;
+    font-size: 100%;
+}
+.logo{
+    position: absolute;
+    width: 4%;
+    height: 10%;
+    left:  45%;
+    top: 20%;
+    background: #f7c25f00;
+    z-index: 2;
+    
+}
+.aveli{
+    position: absolute;
+    font-family: Arial;
+    color: #F7C35F;
+    margin-left: 39.5%;
+    margin-top: 17%;
+    font-size: 120%;
+}
+.lav{
+    position: absolute;
+    font-family: Arial;
+    color: #60941A;
+    margin-left: 44%;
+    margin-top: 17%;
+    font-size: 120%;
+}
