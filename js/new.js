@@ -1,0 +1,1 @@
+['<div class="product"><imgsrc=${product.img}alt=""class="pimg"><span class="name">${product.name}</span><span class="priceText">֏${product.price}</span></div>', 'fdf']

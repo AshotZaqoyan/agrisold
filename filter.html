@@ -10,6 +10,7 @@
 	<title>Filter Project</title>
 </head>
 <body>
+	<img src="img/filterbg.png" alt="Ետնապատկեր" class="bg">
 	<nav>
 		<input id="nav-toggle" type="checkbox">
 		<div class="logo"><img src="img/logo.svg" alt="logo" class="nkarlogo"><a href="index.html"
@@ -30,24 +31,34 @@
 		</label>
 	</nav>
 	<div class="container">
-		<div class="leftMenu">
-			<input type="text" placeholder="Որոնել․․․" class="search">
-
-			<h2 class="filtertitle">Կատեգորիաներ</h2>
-			<div class="cats">
+		<div class="leftMenu" id="leftMenu">
+			<div class="leftMenu_div">
+				<input type="text" placeholder="Որոնել․․․" class="search">
+				<h2 class="filtertitle">Կատեգորիաներ</h2>
+				<div class="cats">
+				</div>
+				<br>
+				<h2 class="filtertitle">Առավելագույն գին</h2>
+				<div class="price">
+					<input type="range" class="priceRange">
+					<span class="priceValue"></span>
+				</div>
 			</div>
-			<br>
-			<h2 class="filtertitle">Առավելագույն գին</h2>
-			<div class="price">
-				<input type="range" class="priceRange">
-				<span class="priceValue"></span>
-			</div>
+		</div>
+		<div class="filtermenu" id="leftmenuicon">
+			<label for="check" class="filter_check">
+				<input type="checkbox" id="check"> 
+				<span class="gic"></span>
+				<span class="gic"></span>
+				<span class="gic"></span>
+			</label>
 		</div>
 		<div class="content">
 			<div class="products">
 			</div>
 		</div>
 	</div>
+	<script src="js/filtermenu.js"></script>
 	<script src="js/filter.js"></script>
 </body>
 

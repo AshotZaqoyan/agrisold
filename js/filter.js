@@ -79,6 +79,7 @@ let searchvalue = "";
 let rangevalu;
 let choices = [];
 let filteredData;
+let maxPricecheck;
 
 const displayProducts = filteredProducts => {
 	productsContainer.innerHTML = filteredProducts
@@ -89,7 +90,7 @@ const displayProducts = filteredProducts => {
 							 <img
 							 src=${product.img}
 							 alt=""
-							 />
+							 class="pimg">
 							 <span class="name">${product.name}</span>
 							 <span class="priceText">֏${product.price}</span>
 						</div>
@@ -126,6 +127,7 @@ const setPrices = () => {
 	priceRange.value = maxPrice;
 	priceValue.textContent = "֏" + maxPrice;
 	rangevalu = maxPrice;
+	maxPricecheck = maxPrice;
 	priceRange.addEventListener("input", e => {
 		rangevalu = e.target.value;
 		priceValue.textContent = "֏" + e.target.value;
@@ -135,7 +137,13 @@ const setPrices = () => {
 };
 
 function checkfilter() {
-	filteredData = (data.filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1)).filter(item => item.price <= rangevalu);
+	filteredData = data;
+	if(rangevalu !== maxPricecheck){
+		filteredData = filteredData.filter(item => item.price <= rangevalu);
+	}
+	if(searchvalue !==""){
+		filteredData = filteredData.filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1);
+	}
 	if (choices[0] !== undefined && !(choices.includes("1"))) {
 		filteredData = filteredData.filter(item => choices.includes(item.cat));
 	}
