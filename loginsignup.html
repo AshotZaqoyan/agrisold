@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/loginsigup.css">
+	<title>AgriSold</title>
+</head>
+
+<body>
+	<nav>
+		<input id="nav-toggle" type="checkbox">
+		<div class="logo"><img src="img/logo.svg" alt="logo" class="nkarlogo"><a href="index.html"
+				class="logo_txt">Agrisold</a></div>
+		<ul class="links">
+			<li><a href="index.html" class="active">ԳԼԽԱՎՈՐ</a></li>
+			<li><a href="filter.html" class="noactive">Խանութ</a></li>
+			<li><a href="works.html" class="noactive">Աշխատանք</a></li>
+			<li><a href="#" class="noactive">Բլոգ</a></li>
+			<li><a href="#" class="noactive">Կապ</a></li>
+			<li><a href="#" class="noactive">Մեր Մասին</a></li>
+			<li><a href="#" class="noactive">Մուտք</a></li>
+		</ul>
+		<label for="nav-toggle" class="icon-burger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</label>
+	</nav>
+	<div class="forms-out">
+		<div class="forms-in">
+			<div id="registration-page" class="hide">
+				<button id="show-login" class="noacbuttonre">Մուտք գործել</button>
+				<button class="acbuttonre">Գրանցվել</button>
+				<div class="div_reg">
+					<br><br><br>
+					<input type="text" id="name" required placeholder="Անուն"><br>
+					<input type="text" id="lastname" required placeholder="Ազգանուն"><br>
+					<input type="email" id="registration-email" required placeholder="Էլ Հասցե"><br>
+					<input type="email" id="registration-reemail" autocomplete="disable" required
+						placeholder="Հաստատեք էլ Հասցեն"><br>
+					<input type="password" id="registration-password" required placeholder="Գաղտնաբառ"><br>
+					<input type="file" onchange="chooseFile(e)">
+					<button id="register">Գրանցվել</button>
+					<br><br>
+					<hr>
+					<br>
+				</div>
+			</div>
+			<div id="login-page">
+				<button class="acbutton">Մուտք</button>
+				<button id="show-register" class="noacbutton">Գրանցվել</button>
+				<br><br><br>
+				<div class="div_reg">
+					<input type="email" id="login-email" placeholder="Էլ Հասցե">
+					<input type="password" id="login-password" placeholder="Գաղտնաբառ">
+					<button id="login">Մուտք գործել</button>
+					<br><br><br>
+					<p id="forgot-password">Մոռացե՞լ եք գաղտնաբառը</p>
+					<hr>
+					<br>
+				</div>
+			</div>
+			<figure class="hide" id="snip1336">
+				<figcaption>
+					<div class="div_signout"><img
+							src="https://firebasestorage.googleapis.com/v0/b/codesign-rf-gd.appspot.com/o/logo.png?alt=media&token=16fea675-5309-43ca-9836-79c227b509ba"
+							onerror="this.onerror=null; this.src='https://firebasestorage.googleapis.com/v0/b/codesign-rf-gd.appspot.com/o/logo.png?alt=media&token=16fea675-5309-43ca-9836-79c227b509ba'"
+							alt="profile-img" class="profile" id="edit-save" align="center">
+						<div class="forlogoutdiv"><img src="img/logout.svg" alt="Դուրս գալ" id="signout"></div>
+					</div>
+
+					<br>
+					<div>
+						<div class="contfirstname">Անուն<br>
+							<div id="myfirstname"></div>
+						</div>
+						<div class="contlastname">Ազգանուն<br>
+							<div id="mylastname"></div>
+						</div>
+					</div>
+					<br>
+					<div class="contemail">Էլ․ Հասցե<br>
+						<div id="usermailh2"></div>
+					</div>
+					<br><br>
+					<label class="inputfile" onclick="upshow()">Փոխել նկարը</label>
+					<br>
+				</figcaption>
+			</figure>
+		</div>
+	</div>
+	<div class="container" id="upcontainer">
+		<div class="card">
+			<div class="close" onclick="upclose()">
+				<div class="closeline"></div>
+				<div class="closeline"></div>
+			</div>
+			<div class="card-body">
+				<div class="card-title">Վերբեռնեք ձեր նկարը այստեղ</div>
+				<div class="file-upload">
+					<input class="file-input" type="file" id="file-upload" accept="images/*">
+					<img src="img/upload.svg" alt="icon" class="upicon">
+					<div class="card-subtitle" id="file-upload-filename">Քաշեք և թողեք ֆայլը կամ սեղմեք վերբեռնելու
+						համար</div>
+				</div>
+				<center>
+					<div class="buttupload" onclick="upload()">Թարմացնել</div>
+				</center>
+			</div>
+		</div>
+	</div>
+	<!-- Icons made by Smashicons https://www.flaticon.com/authors/smashicons -->
+	<!--Firebase-->
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+	<!--Firebase End-->
+	<script src="js/firebase.js"></script>
+	<script src="js/loginsignup.js"></script>
+</body>
+
+</html>

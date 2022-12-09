@@ -83,7 +83,7 @@ nav .links li {
 }
 
 nav .links a {
-	
+
 	display: block;
 	padding: 1em;
 	padding-top: 5px;
@@ -114,12 +114,14 @@ nav .icon-burger .line {
 	border-radius: 3px;
 	transition: all .3s ease-in-out;
 }
-a.noactive{
+
+a.noactive {
 	color: #FFFFFF;
 	background: #60941A;
 	border: 3px solid #60941A;
 	border-radius: 30px;
 }
+
 a.active {
 	color: #60941A;
 	background: #FFFFFF;

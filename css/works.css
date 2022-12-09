@@ -15,7 +15,7 @@
 
 .container {
 	display: flex;
-	padding: 50px 50px 50px 50px;
+	padding: 50px 2.6% 50px 50px;
 }
 
 
@@ -69,27 +69,67 @@
 .product {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	width: 350px;
+	max-width: 530px;
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-	align-items: center;
+	padding: 15px;
 	border: 5px solid #60941A;
-	border-radius: 55px;
+	border-radius: 25px;
 	margin: 43.5px auto 43.5px auto;
 	background-color: white;
 }
 
-.pimg {
-	width: 150px;
-	height: 250px;
-	object-fit: contain;
-}
+
 
 .name {
 	font-weight: 300;
 	color: #60941A;
 	font-size: 23px;
+}
+
+.regeon {
+	font-weight: 300;
+	color: #87a85c;
+	font-size: 18px;
+	font-weight: 100;
+}
+
+.div_money {
+	font-size: 18px;
+	width: 160px;
+	height: 45px;
+	border-radius: 8px;
+	background-color: #F6FFEA;
+	display: flex;
+	align-items: center;
+	color: #60941A;
+}
+
+.money {
+	width: 35px;
+	height: 35px;
+	margin-left: 8px;
+	margin-right: 10px;
+}
+
+.prdklor {
+	width: 10px;
+	height: 10px;
+	left: 550px;
+	top: 447px;
+	background: #FFFFFF;
+	border: 3px solid #60941A;
+	display: inline-block;
+	border-radius: 100%;
+	margin-right: 7px;
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align: end;
+}
+
+.info {
+	color: #60941A;
 }
 
 .priceText {
@@ -296,7 +336,7 @@ input[type='checkbox'] {
 
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 1000px) {
 	.filtermenu {
 		position: fixed;
 		display: flex;
@@ -326,7 +366,7 @@ input[type='checkbox'] {
 	}
 
 	.container {
-		padding: 20px 50px 50px 0px;
+		padding: 20px 0 50px 0px;
 	}
 
 	#check:checked+.filtermenu {

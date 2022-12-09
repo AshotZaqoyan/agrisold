@@ -138,10 +138,10 @@ const setPrices = () => {
 
 function checkfilter() {
 	filteredData = data;
-	if(rangevalu !== maxPricecheck){
+	if (rangevalu !== maxPricecheck) {
 		filteredData = filteredData.filter(item => item.price <= rangevalu);
 	}
-	if(searchvalue !==""){
+	if (searchvalue !== "") {
 		filteredData = filteredData.filter(item => item.name.toLowerCase().indexOf(searchvalue) !== -1);
 	}
 	if (choices[0] !== undefined && !(choices.includes("1"))) {
