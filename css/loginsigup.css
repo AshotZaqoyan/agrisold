@@ -398,6 +398,16 @@
 
 }
 
+.imgreg{
+	display: none;
+}
+
+.regcustom-file-upload{
+	padding: 10px 25px;
+	background-color: #f7c35f;
+	border-radius: 10px;
+}
+
 .buttupload:hover {
 	background-color: #f7c35f;
 	color: #ffffff;

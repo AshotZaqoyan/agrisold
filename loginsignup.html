@@ -43,7 +43,10 @@
 					<input type="email" id="registration-reemail" autocomplete="disable" required
 						placeholder="Հաստատեք էլ Հասցեն"><br>
 					<input type="password" id="registration-password" required placeholder="Գաղտնաբառ"><br>
-					<input type="file" onchange="chooseFile(e)">
+					<label for="regimgup" class="regcustom-file-upload">
+						<input type="file" id="regimgup" onchange="chooseFile(e)" class="imgreg">Ընտրել նկար
+					</label>
+					<br><br>
 					<button id="register">Գրանցվել</button>
 					<br><br>
 					<hr>
@@ -72,7 +75,6 @@
 							alt="profile-img" class="profile" id="edit-save" align="center">
 						<div class="forlogoutdiv"><img src="img/logout.svg" alt="Դուրս գալ" id="signout"></div>
 					</div>
-
 					<br>
 					<div>
 						<div class="contfirstname">Անուն<br>
