@@ -1,36 +1,51 @@
 .footer {
-	background: linear-gradient(rgba(108, 163, 34, 0.7), rgba(108, 163, 34, 0.7)), url(..//img/cta-1-bg-1.jpg);
+	background: linear-gradient(rgba(108, 163, 34, 0.7), rgba(108, 163, 34, 0.7)), url(cta-1-bg-1.jpg);
 	background-position: center;
 	background-size: cover;
-	padding-bottom: 400px;
+	padding-bottom: 5%;
+	margin-top: -3%;
 }
 
-.footer
-    {background: 
-         linear-gradient(rgba(108,163,34,0.7),
-          rgba(108,163,34,0.7)), url(cta-1-bg-1.jpg)  ;
-         background-position: center;
-        background-size: cover;
-        padding-bottom: 5%;
-        margin-top: -3%;
-    }
-     .dz{ margin-left: 10%;
-        margin-top: 5%;
-        border-radius: 12px;
-    }
-    .i,.t,.f{background-color: #f7c35f;
-    border-radius: 12px;
-    }
-    p{ color: white;}
-	h1{color: white;
-    margin-left: 10%;}
-    .a{color: white;
-    margin-left: 2%;}
-	.p{margin-left: 20%;
-	margin-top: 5%;}
-	.e{margin-left: 20%;}
-	.f{margin-left: 20%;
-	margin-top: 10%;}
+.dz {
+	margin-left: 10%;
+	margin-top: 5%;
+	border-radius: 12px;
+}
+
+.i,
+.t,
+.f {
+	background-color: #f7c35f;
+	border-radius: 12px;
+}
+
+p {
+	color: white;
+}
+
+h1 {
+	color: white;
+	margin-left: 10%;
+}
+
+.a {
+	color: white;
+	margin-left: 2%;
+}
+
+.p {
+	margin-left: 20%;
+	margin-top: 5%;
+}
+
+.e {
+	margin-left: 20%;
+}
+
+.f {
+	margin-left: 20%;
+	margin-top: 10%;
+}
 
 .se1 {
 	background: #F6F5F2;
