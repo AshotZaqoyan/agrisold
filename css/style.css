@@ -1,5 +1,5 @@
 .footer {
-	background: linear-gradient(rgba(108, 163, 34, 0.7), rgba(108, 163, 34, 0.7)), url(cta-1-bg-1.jpg);
+	background: linear-gradient(rgba(108, 163, 34, 0.7), rgba(108, 163, 34, 0.7)), url(..//img/cta-1-bg-1.jpg);
 	background-position: center;
 	background-size: cover;
 	padding-bottom: 5%;
@@ -247,28 +247,59 @@ h1 {
 .se3img {
 	border-radius: 30px;
 	width: 33%;
-	margin-left: 5%;
+	margin-left: 15%;
+	margin-top: 100px;
 }
-
+.kan_dex{
+	top: 1250px;
+	margin-left: 60px;
+}
 .kan,
-.dex {
+.dex { border-radius: 16px;
 	display: inline-block;
 	width: 30vw;
 	height: 35vw;
 }
+.se3greentext{
+	color:#F7C35F;
+	margin-top: 190px;
+	margin-left:45px;
+	font-size: large;
+}
+.se3yellowtext{
+	color: #60941A;
+	margin-top: 50px;
+	font-size: larger;
+}
+.bag{color: white;
+	margin-top: 30px;
 
+}
 .kan {
 	background-color: #60941A;
+	border: 10px dashed;
+	border-color: #F7C35F;
+    border-radius: 16px; 
 }
 
 .dex {
 	background-color: #F7C35F;
 	position: absolute;
 	left: 25%;
+	border: 10px dashed;
+	border-color: #60941A;
+    border-radius: 16px; 
+	border-left: none;
+	border-top-left-radius: 1px;
+	border-bottom-left-radius:1px;
+
+	
 }
 
 .sec3logo {
 	width: 50px;
+	margin-top: 30px;
+	margin-left: 25px;
 }
 
 .kan_dex {
