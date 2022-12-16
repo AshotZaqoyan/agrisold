@@ -133,8 +133,8 @@ document
 	});
 
 const authenticate = (email, password) => {
-	const auth = firebase.auth();
-	auth.signInWithEmailAndPassword(email, password);
+//	const auth = firebase.auth();
+//	auth.signInWithEmailAndPassword(email, password);
 	firebase
 		.auth()
 		.signInWithEmailAndPassword(email, password)
