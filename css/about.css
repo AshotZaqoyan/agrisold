@@ -1,4 +1,4 @@
-.bm{margin-top: -140px;
+.bm{margin-top: -110px;
     margin-left: 120px;
     width: 80%;
     height: auto ;
@@ -41,7 +41,7 @@ margin-left: 120px;
 border: 8px solid #6CA322;
 border-radius: 80px;
 padding:5%;
-margin-top: -140px;
+margin-top: -110px;
 margin-left: 120px;
 }
 
@@ -57,6 +57,7 @@ margin-left: 120px;
    border-radius: 25px;
    color: #F7C35F;
    margin-left: 120px;
+   margin-top: 100px;
 }
 .ara{
    margin-left: 60px;
@@ -79,11 +80,11 @@ margin-left: 120px;
    margin-top: -4px;
 }
 .sn{margin-left: 300px;
-margin-top: -70px;}
+margin-top: -50px;}
 .tn{margin-left: 505px;
-   margin-top: -72px;
+   margin-top: -50px;
 }
 .zn{
    margin-left: 78%;
-   margin-top: -72px;
+   margin-top: -50px;
 }
