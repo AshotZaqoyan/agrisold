@@ -1,0 +1,39 @@
+.nyut, .nyut1, .nyut2, .nyut3{
+    width: 400px;
+   height: 500px;
+   border: 3px solid  #60941a;
+   border-radius: 12px;
+}
+.s{ width: 400px;
+   border-top-left-radius: 9px;
+   border-top-right-radius: 9px;
+}
+.nyut{
+   margin-left: 15%;
+}
+.nyut1{
+   margin-left: 60%;
+   margin-top: -506px
+}
+.nyut2{margin-left: 15%;
+   margin-top: 120px;
+
+}
+.nyut3{margin-left: 60%;
+   margin-top: -506px}
+
+
+   p{
+
+font-size: 15px;
+text-align: center;
+color: #60941a;}
+
+.ad{ margin-left: 310px;
+margin-top: -40px;}
+
+.bj{position: fixed;
+   height: 50%;
+   z-index: -1;
+   bottom: 0px;
+   right: 0px;}
