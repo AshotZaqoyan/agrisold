@@ -4,9 +4,9 @@
    border: 3px solid  #60941a;
    border-radius: 12px;
 }
-.s{
-   border-top-left-radius: 12px;
-   border-top-right-radius: 12px;
+.s{ width: 400px;
+   border-top-left-radius: 9px;
+   border-top-right-radius: 9px;
 }
 .nyut{
    margin-left: 15%;
@@ -23,9 +23,9 @@
    margin-top: -506px}
 
 
-   p{background-color: white;
-border-radius: 12px;
-font-size: small;
+   p{
+
+font-size: 15px;
 text-align: center;
 color: #60941a;}
 
