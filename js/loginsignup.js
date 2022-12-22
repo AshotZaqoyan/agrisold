@@ -1,4 +1,5 @@
 const auth = firebase.auth();
+const stor = firebase.storage();
 document.querySelector("#show-register").addEventListener("click", () => {
 	showRegistration();
 });
@@ -133,8 +134,6 @@ document
 	});
 
 const authenticate = (email, password) => {
-//	const auth = firebase.auth();
-//	auth.signInWithEmailAndPassword(email, password);
 	firebase
 		.auth()
 		.signInWithEmailAndPassword(email, password)
@@ -172,22 +171,21 @@ auth.onAuthStateChanged((firebaseUser) => {
 		var useremail = auth.currentUser.email;
 		document.getElementById("usermailh2").innerHTML = useremail;
 
-		var storageRef = firebase.storage().ref('images/' + user);
+		var storageRef = stor.ref('images/' + user);
 		//1. Try:
 		storageRef.getDownloadURL().then(function (url) {
 			var edit_save = document.getElementById("edit-save");
 			edit_save.src = url;
 		});
 
-
-		var user_ref = database.ref('users/' + user);
-		user_ref.on('value', function (snapshot) {
+		database.ref('users/' + user).on('value', function (snapshot) {
 			var data = snapshot.val();
 			document.getElementById("myfirstname").innerHTML = data.name;
 			document.getElementById("mylastname").innerHTML = data.lastname;
 		});
-
-
+	}
+	else{
+		showLogin();
 	}
 });
 
@@ -226,7 +224,7 @@ function upload() {
 	var imageName = auth.currentUser.uid;
 	//firebase storage reference
 	//it is the path where your image will be stored
-	var storageRef = firebase.storage().ref('images/' + imageName);
+	var storageRef = stor.ref('images/' + imageName);
 	//upload image to selected storage reference
 	//make sure you pass image here
 	var uploadTask = storageRef.put(image);

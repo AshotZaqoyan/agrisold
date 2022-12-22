@@ -253,3 +253,18 @@ nav ul li a:hover {
 	}
 
 }
+.notlogin{
+	
+}
+.menu_logo{
+	
+}
+.lianone{
+	background-color: rgba(0, 0, 0, 0);
+	padding: 0;
+}
+.lianone:hover{
+	background-color: rgba(0, 0, 0, 0);
+	padding: 0;
+	border: none;
+}
